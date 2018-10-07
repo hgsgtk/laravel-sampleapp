@@ -6,7 +6,12 @@ namespace App\Eloquent;
 use App\Model\PointEvent;
 use Illuminate\Database\Eloquent\Model;
 
-final class EloquentCustomerPointEvent extends Model
+final /**
+ * App\Eloquent\EloquentCustomerPointEvent
+ *
+ * @mixin \Eloquent
+ */
+class EloquentCustomerPointEvent extends Model
 {
     protected $table = 'customer_point_events';
 

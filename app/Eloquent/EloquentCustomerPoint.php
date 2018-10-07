@@ -5,7 +5,12 @@ namespace App\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 
-final class EloquentCustomerPoint extends Model
+final /**
+ * App\Eloquent\EloquentCustomerPoint
+ *
+ * @mixin \Eloquent
+ */
+class EloquentCustomerPoint extends Model
 {
     protected $table = 'customer_points';
 
