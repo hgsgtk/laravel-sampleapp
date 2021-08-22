@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCustomerPointsTable extends Migration
+class CreateCustomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCustomerPointsTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer_points', function (Blueprint $table) {
-            $table->integer('customer_id');
-            $table->integer('point');
+        Schema::create('customers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateCustomerPointsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_points');
+        Schema::dropIfExists('customers');
     }
 }
